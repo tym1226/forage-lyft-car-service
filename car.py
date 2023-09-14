@@ -3,9 +3,10 @@ from abc import ABC, abstractmethod
 from serviceable import Serviceable
 
 class Car(Serviceable, ABC):
-    def __init__(self, engine, battery):
+    def __init__(self, engine, battery, tire):
         self.engine = engine
         self.battery = battery
+        self.tire = tire
 
     @abstractmethod
     def needs_service(self):
